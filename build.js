@@ -49,7 +49,8 @@ async function main() {
 
         console.log("Copying static files");
         for await (const p of walk('public')) {
-            const destPath = path.join("build", p);
+            const destPath = path.join("build", path.relative("public", p));
+            console.log(destPath);
 
             // Check if it's a CSS file
             if (p.endsWith(".css")) {
@@ -106,7 +107,7 @@ async function main() {
             }
         }
     } catch (e) {
-        console.error("An error occurred:", error);
+        console.error("An error occurred:", e);
         process.exit(1);
     }
 }
