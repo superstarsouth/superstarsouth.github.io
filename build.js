@@ -97,7 +97,7 @@ async function main() {
                 const postName = path.basename(postFile, ".md");
 
                 // Compile post content asynchronously
-                const compiledHTML = await compilePostAsync(postPath);
+                const compiledHTML = await compilePostAsync("/posts/" + postName);
 
                 // Save compiled HTML to build/posts directory
                 const destPath = path.join("build/posts", `${postName}.html`);
