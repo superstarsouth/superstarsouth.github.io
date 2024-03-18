@@ -7,7 +7,7 @@ require_once "layout/common.php";
     <div style="font-size: 50px;font-weight:700;margin: 30px 0;">Making your favorite games accessible to all.</div>
 
     <div style="display: grid;gap: 10px;">
-        <a class="glossy-btn bg-cyan" href="/devlog">
+        <a class="glossy-btn bg-cyan" href="/posts">
             Read our devlog
         </a>
 
