@@ -46,7 +46,7 @@ function compilePHP(page, callback) {
 }
 
 function compilePost(page, callback) {
-    const args = ['-f', 'layout/blogpost.php', "post=." + (page + '.md')];
+    const args = ['-f', 'layout/blogpost.php', "post=./" + (page + '.md')];
     runPHP(args, callback);
 }
 
